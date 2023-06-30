@@ -23,33 +23,38 @@ body {
 ::selection {  
   background-color: transparent;
 }
-.rose {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 100px;
-}
+
 .center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.center > .first,
+.center > .last {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.center > .first > .letter,
+.center > .last > .letter {
+  margin: 0;
+  cursor: pointer;
+}
+
+.center > .first > .letter:hover,
+.center > .last > .letter:hover {
+  color: white;
+}
+
 
 .content-root {
   position: relative;
   height: 100vh;
+  overflow: hidden;
 }
 .title {
   margin: 0;
-}
-
-.marcia {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  max-width: 250px;
 }
 
 .nav-menu {
@@ -75,3 +80,60 @@ body {
   color: black;
 }
 
+
+
+.marcia {
+  position: absolute;
+  bottom: 0;
+  left: 300px;
+  max-width: 250px;
+}
+.rose {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 100px;
+}
+.mango1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 250px;
+}
+.alien {
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 250px;
+}
+.nona {
+  position: absolute;
+  right: -50px;
+  top: 40%;
+  transform: translateY(-50%);
+  max-width: 350px;
+}
+
+.ciggy-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100px;
+  width: 100px;
+}
+.ciggy {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 250px;
+}
+
+.smoke {
+  position: absolute;
+  right: 152px;
+  bottom: 0px;
+  transform: translateY(-50%) rotate(-31deg);
+  max-width: 50px;
+}
