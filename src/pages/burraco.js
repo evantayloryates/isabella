@@ -1,14 +1,14 @@
 import React from 'react';
 
 
-const Buraco = () => {
+const Burraco = () => {
   return (
     <>
       <div className="center">
-        <h2>Buraco</h2>
+        <h2>Burraco</h2>
       </div>
     </>
   )
 }
 
-export default Buraco
+export default Burraco

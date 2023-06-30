@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { 
   About,
   Acting,
-  Buraco,
+  Burraco,
   Contact,
   HappyBirthday,
   Home,
@@ -25,7 +25,7 @@ const Izzy = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/pics" element={<Pics />} />
-          <Route path="/buraco" element={<Buraco />} />
+          <Route path="/burraco" element={<Burraco />} />
           <Route path="/happy-birthday" element={<HappyBirthday />} />
           <Route path="/upcoming" element={<Upcoming />} />
           <Route path="/acting" element={<Acting />} />

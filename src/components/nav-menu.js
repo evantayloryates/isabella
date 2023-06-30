@@ -46,7 +46,7 @@ const NavMenu = () => {
         <li>
           <Link to="/pics">Pics?</Link></li>
         <li>
-          <Link to="/buraco">Buraco</Link></li>
+          <Link to="/burraco">Burraco</Link></li>
         <li>
           <Link to="/happy-birthday">Happy Birthday</Link></li>
         <li>
@@ -61,10 +61,14 @@ const NavMenu = () => {
       <Link to="/">
         <img className="rose" src={rose} />
       </Link>
-      <img className="marcia" src={marcia}/>
+      <Link to="/happy-birthday">
+        <img className="marcia" src={marcia}/>
+      </Link>
       <img className="mango1" src={mango1}/>
       <img className="alien" src={alien}/>
-      <img className="nona" src={nona}/>
+      <Link to="/burraco">
+        <img className="nona" src={nona}/>
+      </Link>
       <div className="ciggy-container">
         <img className="ciggy" src={ciggy}/>
         <img className="smoke" src={smoke}/>
