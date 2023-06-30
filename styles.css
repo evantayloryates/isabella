@@ -18,10 +18,9 @@ h1 {
 body {
   margin: 0;
   font-family: 'Martian Mono', serif; /* Use the custom font */
-  /* background-color: rgb(255 66 66); */
+  color:rgb(255, 66, 66);
 }
-::selection {
-  color: white;
+::selection {  
   background-color: transparent;
 }
 
