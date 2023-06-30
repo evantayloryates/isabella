@@ -21,11 +21,18 @@ module.exports = {
         // use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
         type: 'asset/resource',
         generator: {
           filename: 'fonts/[hash][ext][query]',
         },
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[hash][ext][query]'
+        }
       },
       {
         test: /\.(js|jsx)$/,
@@ -45,13 +52,15 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'styles.css',
     }),
-    // new CopyWebpackPlugin({
-    //   patterns: [
-    //     { from: 'CNAME', to: '.' },
-    //   ],
-    // }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'CNAME', to: '.' },
+        { from: 'src/assets/public', to: 'public' }, // adjust 'src/images' to match the location of your images
+      ],
+    }),
   ],
   devServer: {
+    historyApiFallback: true,
     static: {
       directory: path.join(__dirname, "./")
     },
