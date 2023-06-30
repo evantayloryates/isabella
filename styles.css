@@ -18,7 +18,7 @@ h1 {
 body {
   margin: 0;
   font-family: 'Martian Mono', serif; /* Use the custom font */
-  background-color: rgb(255 66 66);
+  /* background-color: rgb(255 66 66); */
 }
 ::selection {
   color: white;
@@ -40,20 +40,33 @@ body {
   margin: 0;
 }
 
+.marcia {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 250px;
+}
+
 .nav-menu {
   padding: 0;
-  margin: 0;
+  margin: 4px 0 0 0 ;
   line-height: 0.9;
   list-style-type: none;
   font-size: 2rem;
 }
 
+.nav-menu.inverted > li > a {
+  color: black;
+}
+.nav-menu.inverted > li > a:hover {
+  color: white;
+}
 .nav-menu > li > a {
   text-decoration: none;
-  color: black;
+  color: rgb(255, 66, 66);
 }
 
 .nav-menu > li > a:hover {
-  color: white;
+  color: black;
 }
 
