@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Martian Mono';
+  src: url(/fonts/9dc9a40944d5007bc4d9.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.custom-font {
+  font-family: 'Martian Mono', serif; /* Use the custom font */
+}
