@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Martian Mono';
+  src: url('./assets/fonts/Martian_Mono/MartianMono-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.custom-font {
+  font-family: 'Martian Mono', serif; /* Use the custom font */
+}

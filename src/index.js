@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Izzy } from './applications';
+import './index.css';
 
-const App = () => <h1>Hello, React!</h1>;
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<Izzy />, document.getElementById('app'));
