@@ -20,6 +20,7 @@ body {
   font-family: 'Martian Mono', serif; /* Use the custom font */
   color:rgb(255, 66, 66);
 }
+
 ::selection {  
   background-color: transparent;
 }
@@ -58,11 +59,13 @@ body {
 }
 
 .nav-menu {
-  padding: 0;
+  padding: 8px 0 0 0;
   margin: 0;
   line-height: 0.9;
   list-style-type: none;
   font-size: 2rem;
+  position: relative;
+  z-index: 100;
 }
 
 .nav-menu.inverted > li > a {
@@ -71,9 +74,15 @@ body {
 .nav-menu.inverted > li > a:hover {
   color: white;
 }
+.nav-menu > li {
+  max-height: 36px;
+  display: flex;
+  align-items: center;
+}
 .nav-menu > li > a {
   text-decoration: none;
   color: rgb(255, 66, 66);
+  font-size: 2.5rem;
 }
 
 .nav-menu > li > a:hover {
@@ -103,19 +112,17 @@ body {
 }
 .alien {
   position: absolute;
-  left: -50px;
+  left: 100px;
   top: 50%;
   transform: translateY(-50%);
-  max-width: 250px;
+  max-width: 100px;
 }
 .nona {
   position: absolute;
-  right: -50px;
-  top: 40%;
-  transform: translateY(-50%);
-  max-width: 350px;
+  right: 50px;
+  top: 10px;
+  max-width: 300px;
 }
-
 .ciggy-container {
   position: absolute;
   bottom: 0;
@@ -136,4 +143,33 @@ body {
   bottom: 0px;
   transform: translateY(-50%) rotate(-31deg);
   max-width: 50px;
+}
+.peach {
+  max-width: 30px;
+  opacity: 0;
+  /* position: absolute;
+  top: 50%;
+  transform: translateY(-50%); */
+}
+li.show > .peach {
+  opacity: 1.0;
+}
+
+.full {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.happy-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.happy-vimeo {
+  position: relative;
+  z-index: 100;
 }

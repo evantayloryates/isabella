@@ -7,6 +7,7 @@ import mango1 from '../assets/images/mango1.png';
 import alien from '../assets/images/alien.png';
 import nona from '../assets/images/nona.png';
 import smoke from '../assets/images/smoke.gif';
+import peach from '../assets/images/peach.png';
 
 function setDOMSelectionColor(color) {
   var rule = `::selection { color: ${color} }`;
@@ -43,20 +44,34 @@ const NavMenu = () => {
   return (
     <>
       <ul className={`nav-menu ${dynamicClass}`}>
-        <li>
-          <Link to="/pics">Pics?</Link></li>
-        <li>
-          <Link to="/burraco">Burraco</Link></li>
-        <li>
-          <Link to="/happy-birthday">Happy Birthday</Link></li>
-        <li>
-          <Link to="/upcoming">Upcoming</Link></li>
-        <li>
-          <Link to="/acting">Acting</Link></li>
-        <li>
-          <Link to="/contact">Contact</Link></li>
-        <li>
-          <Link to="/about">About</Link></li>
+        <li className={`${pathname === '/pics' && 'show'}`}>
+          <img className="peach" src={peach} />
+          <Link to="/pics">Pics?</Link>
+        </li>
+        <li className={`${pathname === '/burraco' && 'show'}`}>
+          <img className="peach" src={peach} />
+          <Link to="/burraco">Burraco</Link>
+        </li>
+        <li className={`${pathname === '/happy-birthday' && 'show'}`}>
+          <img className="peach" src={peach} />
+          <Link to="/happy-birthday">Happy Birthday</Link>
+        </li>
+        <li className={`${pathname === '/upcoming' && 'show'}`}>
+          <img className="peach" src={peach} />
+          <Link to="/upcoming">Upcoming</Link>
+        </li>
+        <li className={`${pathname === '/acting' && 'show'}`}>
+          <img className="peach" src={peach} />
+          <Link to="/acting">Acting</Link>
+        </li>
+        <li className={`${pathname === '/contact' && 'show'}`}>
+          <img className="peach" src={peach} />
+          <Link to="/contact">Contact</Link>
+        </li>
+        <li className={`${pathname === '/about' && 'show'}`}>
+          <img className="peach" src={peach} />
+          <Link to="/about">About</Link>
+        </li>
       </ul>
       <Link to="/">
         <img className="rose" src={rose} />
@@ -65,7 +80,7 @@ const NavMenu = () => {
         <img className="marcia" src={marcia}/>
       </Link>
       <img className="mango1" src={mango1}/>
-      <img className="alien" src={alien}/>
+      {/* <img className="alien" src={alien}/> */}
       <Link to="/burraco">
         <img className="nona" src={nona}/>
       </Link>
