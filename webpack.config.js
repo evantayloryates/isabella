@@ -55,6 +55,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: 'CNAME', to: '.' },
+        { from: 'src/404.html', to: '.' },
         { from: 'src/assets/public', to: 'public' }, // adjust 'src/images' to match the location of your images
       ],
     }),

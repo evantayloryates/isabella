@@ -8,7 +8,7 @@ const HappyBirthday = () => {
         <iframe 
           src="https://player.vimeo.com/video/533224004?h=723717c1a6" 
           width="640" 
-          height="540" 
+          height="360" 
           frameborder="0" 
           allow="autoplay; fullscreen; picture-in-picture" 
           allowfullscreen 

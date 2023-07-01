@@ -14,17 +14,14 @@ h1 {
   font-family: 'Rock 3D', 'Martian Mono', sans-serif;
   font-size: 4rem;
 }
-
 body {
   margin: 0;
   font-family: 'Martian Mono', serif; /* Use the custom font */
   color:rgb(255, 66, 66);
 }
-
 ::selection {  
   background-color: transparent;
 }
-
 .center {
   position: absolute;
   top: 50%;
@@ -42,13 +39,10 @@ body {
   margin: 0;
   cursor: pointer;
 }
-
 .center > .first > .letter:hover,
 .center > .last > .letter:hover {
   color: white;
 }
-
-
 .content-root {
   position: relative;
   height: 100vh;
@@ -57,7 +51,6 @@ body {
 .title {
   margin: 0;
 }
-
 .nav-menu {
   padding: 8px 0 0 0;
   margin: 0;
@@ -67,7 +60,6 @@ body {
   position: relative;
   z-index: 100;
 }
-
 .nav-menu.inverted > li > a {
   color: black;
 }
@@ -84,13 +76,9 @@ body {
   color: rgb(255, 66, 66);
   font-size: 2.5rem;
 }
-
 .nav-menu > li > a:hover {
   color: black;
 }
-
-
-
 .marcia {
   position: absolute;
   bottom: 0;
@@ -136,7 +124,6 @@ body {
   right: 0;
   max-width: 250px;
 }
-
 .smoke {
   position: absolute;
   right: 152px;
@@ -154,7 +141,6 @@ body {
 li.show > .peach {
   opacity: 1.0;
 }
-
 .full {
   position: absolute;
   top: 0;
@@ -170,6 +156,10 @@ li.show > .peach {
   align-items: center;
 }
 .happy-vimeo {
+  position: relative;
+  z-index: 100;
+}
+.carnivore-youtube {
   position: relative;
   z-index: 100;
 }
