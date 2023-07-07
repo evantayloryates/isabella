@@ -14,6 +14,17 @@ const HappyBirthday = () => {
           allowfullscreen 
           className="happy-vimeo"
         />
+        <p>
+          A girl and her grandmother celebrate a birthday on a summer day in Maine.
+        </p>
+        <p>
+          Independent Shorts awards Finalist for: Best Mobile Short, Best First 
+          Time Director, Best Indie Short
+        </p>
+        <p>
+          Los Angeles Independent Film Festival: Best Woman Filmmaker, Best First 
+          Time Filmmaker
+        </p>
       </div>
     </>
   )

@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Martian Mono';
   src: url('./assets/fonts/Martian_Mono/MartianMono-VariableFont_wdth,wght.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 100 900;
   font-style: normal;
 }
 @font-face {
@@ -59,6 +59,8 @@ body {
   font-size: 2rem;
   position: relative;
   z-index: 100;
+  font-weight: 200;
+  letter-spacing: -2px;
 }
 .nav-menu.inverted > li > a {
   color: black;
@@ -74,7 +76,10 @@ body {
 .nav-menu > li > a {
   text-decoration: none;
   color: rgb(255, 66, 66);
-  font-size: 2.5rem;
+  font-size: 1.7rem;
+}
+.nav-menu > li > img {
+  margin: 0 2px;
 }
 .nav-menu > li > a:hover {
   color: black;
@@ -132,7 +137,7 @@ body {
   max-width: 50px;
 }
 .peach {
-  max-width: 30px;
+  max-width: 24px;
   opacity: 0;
   /* position: absolute;
   top: 50%;
@@ -154,6 +159,7 @@ li.show > .peach {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .happy-vimeo {
   position: relative;
@@ -162,4 +168,17 @@ li.show > .peach {
 .carnivore-youtube {
   position: relative;
   z-index: 100;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-link {
+  font-size: 23px;
+  color: #574658;
+}
+.contact-link:hover {
+  color: #a3a2b9;
 }
