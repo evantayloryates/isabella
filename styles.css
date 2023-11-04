@@ -16,8 +16,10 @@ h1 {
 }
 body {
   margin: 0;
-  font-family: 'Martian Mono', serif; /* Use the custom font */
-  color:rgb(255, 66, 66);
+  /* font-family: 'Martian Mono', serif; Use the custom font */
+  font-family: 'Times New Roman'; /* Use the custom font */
+  /* color:rgb(255, 66, 66); */
+  color: rgb(255,0,0);
 }
 ::selection {  
   background-color: transparent;
@@ -53,36 +55,46 @@ body {
 }
 .nav-menu {
   padding: 8px 0 0 0;
-  margin: 0;
+  margin-left: 20px;
   line-height: 0.9;
   list-style-type: none;
-  font-size: 2rem;
   position: relative;
   z-index: 100;
   font-weight: 200;
-  letter-spacing: -2px;
-}
-.nav-menu.inverted > li > a {
-  color: black;
-}
-.nav-menu.inverted > li > a:hover {
-  color: white;
+  letter-spacing: -0.5px;
 }
 .nav-menu > li {
-  max-height: 36px;
+  height: 29px;
   display: flex;
   align-items: center;
 }
+.nav-menu > li:first-child {
+  height: auto;
+}
+.nav-menu > li:first-child > a {
+  height: 66px;
+}
+.nav-menu > li:first-child > a > img {
+  border-radius: 50%;
+  display: block;
+  border: 2px solid black;
+}
+.nav-menu > li.show:first-child > a > img {
+  border: 2px solid white;
+}
+.nav-menu > li:first-child > a:hover > img {
+  border: 2px solid white;
+}
 .nav-menu > li > a {
   text-decoration: none;
-  color: rgb(255, 66, 66);
-  font-size: 1.7rem;
+  color: black;
+  font-size: 1.5rem;
 }
 .nav-menu > li > img {
   margin: 0 2px;
 }
 .nav-menu > li > a:hover {
-  color: black;
+  color: white;
 }
 .marcia {
   position: absolute;
@@ -117,6 +129,7 @@ body {
   max-width: 300px;
 }
 .ciggy-container {
+  visibility: hidden;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -137,14 +150,14 @@ body {
   max-width: 50px;
 }
 .peach {
-  max-width: 24px;
-  opacity: 0;
-  /* position: absolute;
-  top: 50%;
-  transform: translateY(-50%); */
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  max-width: 100px;
+  opacity: .5;
 }
-li.show > .peach {
-  opacity: 1.0;
+li.show > a {
+  color: white;
 }
 .full {
   position: absolute;
@@ -161,13 +174,26 @@ li.show > .peach {
   align-items: center;
   flex-direction: column;
 }
+.happy-inner-container {
+  width: 640px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
 .happy-vimeo {
   position: relative;
   z-index: 100;
+  border: 4px solid black;
 }
 .carnivore-youtube {
   position: relative;
   z-index: 100;
+  border: 4px solid black;
 }
 
 .contact-container {
@@ -177,8 +203,8 @@ li.show > .peach {
 }
 .contact-link {
   font-size: 23px;
-  color: #574658;
+  color: white;
 }
 .contact-link:hover {
-  color: #a3a2b9;
+  color: black;
 }
