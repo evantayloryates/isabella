@@ -8,6 +8,7 @@ import alien from '../assets/images/alien.png';
 import nona from '../assets/images/nona.png';
 import smoke from '../assets/images/smoke.gif';
 import peach from '../assets/images/peach.png';
+import home from '../assets/images/home-avatar.png';
 
 function setDOMSelectionColor(color) {
   var rule = `::selection { color: ${color} }`;
@@ -33,43 +34,37 @@ const NavMenu = () => {
   } else { 
     setDOMSelectionColor('black');
   }
-  const bodyBGColor = pathname === '/' ? 'rgb(255, 66, 66)' : 'white';
+  // const bodyBGColor = pathname === '/' ? 'rgb(255, 0, 0)' : 'white';
+  const bodyBGColor = 'rgb(255, 0, 0)';
   document.body.style.backgroundColor = bodyBGColor;
   
-  const bodyFGColor = pathname === '/' ? 'black' : 'rgb(255, 66, 66)';
+  // const bodyFGColor = pathname === '/' ? 'black' : 'rgb(255, 0, 0)';
+  const bodyFGColor = 'black';
   document.body.style.color = bodyFGColor;
 
   const dynamicClass = pathname === '/' ? 'inverted' : '';
-
+  console.log('pathname: ', pathname)
   return (
     <>
       <ul className={`nav-menu ${dynamicClass}`}>
-        <li className={`${pathname === '/pics' && 'show'}`}>
-          <img className="peach" src={peach} />
-          <Link to="/pics">Pics?</Link>
+        <li className={`${pathname === '/' && 'show'}`}>          
+          <Link to="/">
+            <img src={home} style={{height: '54px', width: '54px'}}/>
+          </Link>
         </li>
-        <li className={`${pathname === '/burraco' && 'show'}`}>
-          <img className="peach" src={peach} />
+        <li className={`${pathname === '/burraco' && 'show'}`}>          
           <Link to="/burraco">Burraco</Link>
         </li>
-        <li className={`${pathname === '/happy-birthday' && 'show'}`}>
-          <img className="peach" src={peach} />
+        <li className={`${pathname === '/happy-birthday' && 'show'}`}>          
           <Link to="/happy-birthday">Happy Birthday</Link>
         </li>
-        <li className={`${pathname === '/upcoming' && 'show'}`}>
-          <img className="peach" src={peach} />
+        <li className={`${pathname === '/upcoming' && 'show'}`}>          
           <Link to="/upcoming">Upcoming</Link>
         </li>
-        <li className={`${pathname === '/acting' && 'show'}`}>
-          <img className="peach" src={peach} />
+        <li className={`${pathname === '/acting' && 'show'}`}>          
           <Link to="/acting">Acting</Link>
         </li>
-        <li className={`${pathname === '/contact' && 'show'}`}>
-          <img className="peach" src={peach} />
-          <Link to="/contact">Contact</Link>
-        </li>
-        <li className={`${pathname === '/about' && 'show'}`}>
-          <img className="peach" src={peach} />
+        <li className={`${pathname === '/about' && 'show'}`}>          
           <Link to="/about">About</Link>
         </li>
       </ul>
@@ -80,7 +75,7 @@ const NavMenu = () => {
         <img className="marcia" src={marcia}/>
       </Link>
       <img className="mango1" src={mango1}/>
-      {/* <img className="alien" src={alien}/> */}
+      <img className="peach" src={peach}/>
       <Link to="/burraco">
         <img className="nona" src={nona}/>
       </Link>

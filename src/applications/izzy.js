@@ -29,7 +29,6 @@ const Izzy = () => {
           <Route path="/happy-birthday" element={<HappyBirthday />} />
           <Route path="/upcoming" element={<Upcoming />} />
           <Route path="/acting" element={<Acting />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </Router>

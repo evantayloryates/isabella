@@ -5,7 +5,7 @@ const Upcoming = () => {
   return (
     <>
       <div className="center">
-        <h2>Upcoming</h2>
+        <h2>brb</h2>
       </div>
     </>
   )
