@@ -1,0 +1,13 @@
+on Buracco page, only burraco images
+on HBD page, only HBD images
+
+Include home image as link to home page
+Add peach to home page
+Click on letters links to About
+Remove "Contact" and merge into "About"
+Grandma click goes to Burraco
+
+On Burraco, more stills
+
+On Upcoming, let's add "Pics" stuff (and for now remove "Pics?" navitem)
+
