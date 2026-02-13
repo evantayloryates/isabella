@@ -10,9 +10,9 @@ const Acting = () => {
           height="360" 
           src="https://www.youtube-nocookie.com/embed/72lrsIqKjMM" 
           title="YouTube video player" 
-          frameborder="0" 
+          frameBorder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen
+          allowFullScreen
           className='carnivore-youtube'>
         </iframe>
       </div>

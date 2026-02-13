@@ -11,9 +11,9 @@ const HappyBirthday = () => {
             src="https://player.vimeo.com/video/533224004?h=723717c1a6" 
             width="640" 
             height="360" 
-            frameborder="0" 
+            frameBorder="0" 
             allow="autoplay; fullscreen; picture-in-picture" 
-            allowfullscreen 
+            allowFullScreen 
             className="happy-vimeo"
           />
           <p style={{marginBottom: '0px'}}><strong>Independent Shorts awards Finalist for:</strong></p>

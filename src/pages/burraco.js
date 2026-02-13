@@ -6,16 +6,22 @@ const Burraco = () => {
     <>
       <div className="full happy-container">
         <div className="happy-inner-container">
-          {/* <p style={{marginBottom: '23px'}}>A girl and her grandmother celebrate a birthday on a summer day in Maine.</p> */}
-          <iframe 
-            src="https://player.vimeo.com/video/864257878?h=ac869b27c7"
-            width="640" 
-            height="360" 
-            frameborder="0" 
-            allow="autoplay; fullscreen; picture-in-picture" 
-            allowfullscreen 
-            className="happy-vimeo"
-          />
+          <p style={{
+            marginBottom: '23px',
+            width: '470px',
+            textAlign: 'center',
+            }}>When Wanda’s American granddaughter comes to stay with her in suburban Rome, she seeks to close a generational divide and satisfy an unanswered desire for closeness before the summers ends.</p>
+          <div className="vimeo-crop">
+            <iframe 
+              src='https://player.vimeo.com/video/954512319'
+              width="640" 
+              height="360" 
+              frameBorder="0" 
+              allow="autoplay; fullscreen; picture-in-picture" 
+              allowFullScreen 
+              className="happy-vimeo"
+            />
+          </div>
         </div>
       </div>
     </>

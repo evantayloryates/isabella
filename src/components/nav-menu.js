@@ -34,8 +34,8 @@ const NavMenu = () => {
   } else { 
     setDOMSelectionColor('black');
   }
-  // const bodyBGColor = pathname === '/' ? 'rgb(255, 0, 0)' : 'white';
-  const bodyBGColor = 'rgb(255, 0, 0)';
+  
+  const bodyBGColor = '#e2d0cb';
   document.body.style.backgroundColor = bodyBGColor;
   
   // const bodyFGColor = pathname === '/' ? 'black' : 'rgb(255, 0, 0)';
@@ -47,10 +47,19 @@ const NavMenu = () => {
   return (
     <>
       <ul className={`nav-menu ${dynamicClass}`}>
-        <li className={`${pathname === '/' && 'show'}`}>          
+        {/* <li className={`${pathname === '/' && 'show'}`}>          
           <Link to="/">
             <img src={home} style={{height: '54px', width: '54px'}}/>
           </Link>
+        </li> */}
+        <li className={`${pathname === '/' && 'show'}`}>          
+          <Link to="/">Home</Link>
+        </li>
+        <li className={`${pathname === '/hobby-horse-girlz' && 'show'}`}>          
+          <Link to="/hobby-horse-girlz">Hobby Horse Girlz</Link>
+        </li>
+        <li className={`${pathname === '/pics' && 'show'}`}>          
+          <Link to="/pics">Pics?</Link>
         </li>
         <li className={`${pathname === '/burraco' && 'show'}`}>          
           <Link to="/burraco">Burraco</Link>

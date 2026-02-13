@@ -1,27 +1,29 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
-import { 
-  About,
-  Acting,
-  Burraco,
-  Contact,
-  HappyBirthday,
-  Home,
-  Pics,
-  Upcoming,
-} from '../pages';
+import { About, Acting, Burraco, HappyBirthday, HobbyHorseGirlz, Home, Pics, Upcoming } from '../pages';
 
 import { NavMenu } from '../components';
 
 
-const Izzy = () => {
+const IzzyContent = () => {
+  const location = useLocation();
+  const isHhgPage = location.pathname === '/hobby-horse-girlz';
+  
   return (
-    <div className="content-root">
-      <Router>
-        <NavMenu />
-        {/* <div>Photos of Isabella That She Likes of Herself</div> */}
-     
+    <>
+      <div
+        style={{
+          display: 'block',
+          position: isHhgPage ? 'static' : 'fixed',
+          left: isHhgPage ? undefined : '-9999px',
+          top: isHhgPage ? undefined : 0,
+          pointerEvents: isHhgPage ? 'auto' : 'none',
+        }}
+      >
+        <HobbyHorseGirlz />
+      </div>
+      <div style={{ display: isHhgPage ? 'none' : 'block' }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/pics" element={<Pics />} />
@@ -31,10 +33,20 @@ const Izzy = () => {
           <Route path="/acting" element={<Acting />} />
           <Route path="/about" element={<About />} />
         </Routes>
+      </div>
+    </>
+  );
+};
+
+const Izzy = () => {
+  return (
+    <div className="content-root">
+      <Router>
+        <NavMenu />
+        <IzzyContent />
       </Router>
     </div>
-   
-  )
+  );
 }
 
 export default Izzy;
