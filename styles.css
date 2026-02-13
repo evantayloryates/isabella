@@ -10,6 +10,10 @@
   font-weight: normal;
   font-style: normal;
 }
+:root {
+  --spinner-border-color: rgb(227, 227, 227);
+  --spinner-border-top-color: rgb(175 97 97);
+}
 h1 {
   font-family: 'Rock 3D', 'Martian Mono', sans-serif;
   font-size: 4rem;
@@ -18,8 +22,7 @@ body {
   margin: 0;
   /* font-family: 'Martian Mono', serif; Use the custom font */
   font-family: 'Times New Roman'; /* Use the custom font */
-  /* color:rgb(255, 66, 66); */
-  color: rgb(255,0,0);
+  color: #e2d0cb;
 }
 ::selection {  
   background-color: transparent;
@@ -68,7 +71,7 @@ body {
   display: flex;
   align-items: center;
 }
-.nav-menu > li:first-child {
+/* .nav-menu > li:first-child {
   height: auto;
 }
 .nav-menu > li:first-child > a {
@@ -84,7 +87,7 @@ body {
 }
 .nav-menu > li:first-child > a:hover > img {
   border: 2px solid white;
-}
+} */
 .nav-menu > li > a {
   text-decoration: none;
   color: black;
@@ -167,6 +170,7 @@ li.show > a {
   width: 100vw;
   height: 100vh;
 }
+
 .happy-container {
   display: flex;
   justify-content: center;
@@ -184,10 +188,18 @@ li.show > a {
   flex-direction: column;
   align-items: center;
 } 
-.happy-vimeo {
+.vimeo-crop {
   position: relative;
   z-index: 100;
+  width: 640px;
+  height: 316px;
+  overflow: hidden;
   border: 4px solid black;
+}
+.happy-vimeo {
+  display: block;
+  margin-top: -22px;
+  border: none;
 }
 .carnivore-youtube {
   position: relative;
@@ -207,3 +219,4 @@ li.show > a {
 .contact-link:hover {
   color: black;
 }
+
