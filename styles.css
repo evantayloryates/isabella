@@ -1,27 +1,27 @@
 @font-face {
-  font-family: 'Martian Mono';
-  src: url(/fonts/9dc9a40944d5007bc4d9.ttf) format('truetype');
+  font-family: 'Roboto Mono';
+  src: url(/fonts/d0b941a0d7e8f3dd71e7.ttf) format('truetype');
   font-weight: 100 900;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Rock 3D';
-  src: url(/fonts/b8090dd179302c75f91a.ttf) format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Roboto Mono';
+  src: url(/fonts/5cf9427a010e7f40468b.ttf) format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
 }
 :root {
   --spinner-border-color: rgb(227, 227, 227);
   --spinner-border-top-color: rgb(175 97 97);
 }
 h1 {
-  font-family: 'Rock 3D', 'Martian Mono', sans-serif;
+  font-weight: 500;
   font-size: 4rem;
 }
 body {
   margin: 0;
-  /* font-family: 'Martian Mono', serif; Use the custom font */
-  font-family: 'Times New Roman'; /* Use the custom font */
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
   color: #e2d0cb;
 }
 ::selection {  
@@ -63,7 +63,8 @@ body {
   list-style-type: none;
   position: relative;
   z-index: 100;
-  font-weight: 200;
+  font-weight: 400;
+  color: black;
   letter-spacing: -0.5px;
 }
 .nav-menu > li {
@@ -71,23 +72,6 @@ body {
   display: flex;
   align-items: center;
 }
-/* .nav-menu > li:first-child {
-  height: auto;
-}
-.nav-menu > li:first-child > a {
-  height: 66px;
-}
-.nav-menu > li:first-child > a > img {
-  border-radius: 50%;
-  display: block;
-  border: 2px solid black;
-}
-.nav-menu > li.show:first-child > a > img {
-  border: 2px solid white;
-}
-.nav-menu > li:first-child > a:hover > img {
-  border: 2px solid white;
-} */
 .nav-menu > li > a {
   text-decoration: none;
   color: black;
