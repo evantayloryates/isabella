@@ -153,8 +153,7 @@ body {
   position: absolute;
   bottom: 0;
   right: -20px;
-  max-width: 100px;
-  opacity: .5;
+  opacity: 1;
 }
 li.show > a {
   color: white;
