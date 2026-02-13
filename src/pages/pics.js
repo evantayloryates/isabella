@@ -5,7 +5,7 @@ const Pics = () => {
   return (
     <>
       <div className="center">
-        <h2>Pics?</h2>
+        <h2 style={{ color: '#89665d' }}>coming soon...</h2>
       </div>
     </>
   )

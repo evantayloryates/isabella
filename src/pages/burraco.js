@@ -8,7 +8,7 @@ const Burraco = () => {
         <div className="happy-inner-container">
           <p style={{
             marginBottom: '23px',
-            width: '470px',
+            width: '530px',
             textAlign: 'center',
             }}>When Wanda’s American granddaughter comes to stay with her in suburban Rome, she seeks to close a generational divide and satisfy an unanswered desire for closeness before the summers ends.</p>
           <div className="vimeo-crop">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 
 import { About, Acting, Burraco, HappyBirthday, HobbyHorseGirlz, Home, Pics, Upcoming } from '../pages';
 
@@ -32,6 +32,8 @@ const IzzyContent = () => {
           <Route path="/upcoming" element={<Upcoming />} />
           <Route path="/acting" element={<Acting />} />
           <Route path="/about" element={<About />} />
+          <Route path="/hobby-horse-girlz" element={<></>} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
     </>
