@@ -13,6 +13,8 @@
 :root {
   --spinner-border-color: rgb(227, 227, 227);
   --spinner-border-top-color: rgb(175 97 97);
+  --nav-menu-link-padding: 3px;
+  --accolade-delimiter-color: black;
 }
 h1 {
   font-weight: 500;
@@ -22,10 +24,12 @@ body {
   margin: 0;
   font-family: 'Roboto Mono', monospace;
   font-weight: 400;
-  color: #e2d0cb;
+  color: black;
+  background-color: #e2d0cb;
 }
 ::selection {  
-  background-color: transparent;
+  background-color: rgba(175, 97, 97, 0.3);
+  color: inherit;
 }
 .center {
   position: absolute;
@@ -57,9 +61,8 @@ body {
   margin: 0;
 }
 .nav-menu {
-  padding: 8px 0 0 0;
+  padding: 4px 0 0 0;
   margin-left: 20px;
-  line-height: 0.9;
   list-style-type: none;
   position: relative;
   z-index: 100;
@@ -68,7 +71,6 @@ body {
   letter-spacing: -0.5px;
 }
 .nav-menu > li {
-  height: 29px;
   display: flex;
   align-items: center;
 }
@@ -76,6 +78,11 @@ body {
   text-decoration: none;
   color: black;
   font-size: 1.5rem;
+  /* Use padding for consistent perceived gap: equal space above/below each line
+     regardless of ascenders (h, k, l) or descenders (g, y, p). The gap between
+     items = padding-bottom + padding-top of adjacent links. */
+  line-height: 1;
+  padding: var(--nav-menu-link-padding, 0) 0 0 0;
 }
 .nav-menu > li > img {
   margin: 0 2px;
@@ -114,6 +121,12 @@ body {
   right: 50px;
   top: 10px;
   max-width: 300px;
+}
+.per-letter {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
 }
 .ciggy-container {
   visibility: hidden;
@@ -202,4 +215,12 @@ li.show > a {
 }
 .contact-link:hover {
   color: black;
+}
+
+.birthday-accolades {
+  margin-top: 5px;
+}
+.birthday-accolades > strong {
+  margin: 0 5px;
+  color: var(--accolade-delimiter-color);
 }

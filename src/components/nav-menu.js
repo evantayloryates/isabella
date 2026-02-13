@@ -8,7 +8,6 @@ import alien from '../assets/images/alien.png';
 import nona from '../assets/images/nona.png';
 import smoke from '../assets/images/smoke.gif';
 import peach from '../assets/images/peach.png';
-import home from '../assets/images/home-avatar.png';
 
 function setDOMSelectionColor(color) {
   var rule = `::selection { color: ${color} }`;
@@ -27,6 +26,18 @@ function setDOMSelectionColor(color) {
 }
 
 const NavMenu = () => {
+
+  const ROUTES = [
+    { path: '/',                  label: 'Home',              },
+    { path: '/hobby-horse-girlz', label: 'Hobby Horse Girlz', },
+    { path: '/pics',              label: 'Pics?',             },
+    { path: '/burraco',           label: 'Burraco',           },
+    { path: '/happy-birthday',    label: 'Happy Birthday',    },
+    { path: '/upcoming',          label: 'Upcoming',          },
+    { path: '/acting',            label: 'Acting',            },
+    { path: '/about',             label: 'About',             },
+  ]
+
   const { pathname } = useLocation();
   
   if (pathname === '/') {
@@ -34,48 +45,16 @@ const NavMenu = () => {
   } else { 
     setDOMSelectionColor('black');
   }
-  
-  const bodyBGColor = '#e2d0cb';
-  document.body.style.backgroundColor = bodyBGColor;
-  
-  // const bodyFGColor = pathname === '/' ? 'black' : 'rgb(255, 0, 0)';
-  const bodyFGColor = 'black';
-  document.body.style.color = bodyFGColor;
 
   const dynamicClass = pathname === '/' ? 'inverted' : '';
-  console.log('pathname: ', pathname)
   return (
     <>
       <ul className={`nav-menu ${dynamicClass}`}>
-        {/* <li className={`${pathname === '/' && 'show'}`}>          
-          <Link to="/">
-            <img src={home} style={{height: '54px', width: '54px'}}/>
-          </Link>
-        </li> */}
-        <li className={`${pathname === '/' && 'show'}`}>          
-          <Link to="/">Home</Link>
-        </li>
-        <li className={`${pathname === '/hobby-horse-girlz' && 'show'}`}>          
-          <Link to="/hobby-horse-girlz">Hobby Horse Girlz</Link>
-        </li>
-        <li className={`${pathname === '/pics' && 'show'}`}>          
-          <Link to="/pics">Pics?</Link>
-        </li>
-        <li className={`${pathname === '/burraco' && 'show'}`}>          
-          <Link to="/burraco">Burraco</Link>
-        </li>
-        <li className={`${pathname === '/happy-birthday' && 'show'}`}>          
-          <Link to="/happy-birthday">Happy Birthday</Link>
-        </li>
-        <li className={`${pathname === '/upcoming' && 'show'}`}>          
-          <Link to="/upcoming">Upcoming</Link>
-        </li>
-        <li className={`${pathname === '/acting' && 'show'}`}>          
-          <Link to="/acting">Acting</Link>
-        </li>
-        <li className={`${pathname === '/about' && 'show'}`}>          
-          <Link to="/about">About</Link>
-        </li>
+        {ROUTES.map(({ path, label }) => (
+          <li key={path} className={`${pathname === path && 'show'}`}>
+            <Link to={path}>{label}</Link>
+          </li>
+        ))}
       </ul>
       <Link to="/">
         <img className="rose" src={rose} />
