@@ -44,13 +44,22 @@ const NavMenu = () => {
 
   const dynamicClass = pathname === '/' ? 'inverted' : '';
   console.log('pathname: ', pathname)
+  // {/* <li className={`${pathname === '/' && 'show'}`}>          
+  //         <Link to="/">
+  //           <img src={home} style={{height: '54px', width: '54px'}}/>
+  //         </Link>
+  //       </li> */}
   return (
     <>
       <ul className={`nav-menu ${dynamicClass}`}>
-        <li className={`${pathname === '/' && 'show'}`}>          
-          <Link to="/">
-            <img src={home} style={{height: '54px', width: '54px'}}/>
-          </Link>
+        <li className={`${pathname === '/hobby-horse' && 'show'}`}>          
+          <Link to="/">Home</Link>
+        </li>
+        <li className={`${pathname === '/hobby-horse' && 'show'}`}>          
+          <Link to="/hobby-horse">Hobby Horse</Link>
+        </li>
+        <li className={`${pathname === '/pics' && 'show'}`}>          
+          <Link to="/pics">Pics?</Link>
         </li>
         <li className={`${pathname === '/burraco' && 'show'}`}>          
           <Link to="/burraco">Burraco</Link>
